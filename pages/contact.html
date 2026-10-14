@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Reservations — Saveur Restaurant</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/contact.css">
+</head>
+<body>
+
+  <!-- ══ NAVIGATION ══════════════════════ -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Sa<span>veur</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <a href="#reservation" class="btn btn-primary nav-cta">Reserve a Table</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav-drawer" id="navDrawer">
+    <a href="../index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="contact.html">Contact</a>
+    <a href="#reservation" class="btn btn-primary" style="text-align:center">Reserve a Table</a>
+  </div>
+
+  <!-- ══ PAGE HERO ════════════════════════ -->
+  <header class="page-hero">
+    <div class="container">
+      <div class="page-hero-content">
+        <p class="breadcrumb"><a href="../index.html">Home</a> &nbsp;/&nbsp; Contact</p>
+        <h1>Find &amp; <em>Reserve</em></h1>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══ CONTACT SECTION ══════════════════ -->
+  <section class="contact-section" id="reservation">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- LEFT: INFO -->
+        <div class="contact-info animate">
+          <p class="section-label">Get In Touch</p>
+          <h2>We'd Love to<br><em>Host You</em></h2>
+          <p>Whether it's a quiet dinner for two or a festive family gathering, Saveur is the perfect setting. Reserve your table below or reach out to us directly.</p>
+
+          <div class="info-cards">
+            <div class="info-card">
+              <div class="info-icon">📍</div>
+              <div>
+                <h4>Address</h4>
+                <p>12 Connaught Place, Block A<br>New Delhi – 110001, India</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">📞</div>
+              <div>
+                <h4>Phone &amp; Email</h4>
+                <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                <p><a href="mailto:hello@saveur.in">hello@saveur.in</a></p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">🕐</div>
+              <div>
+                <h4>Opening Hours</h4>
+                <table class="hours-table">
+                  <tr><td>Monday – Thursday</td><td>12:00 PM – 10:00 PM</td></tr>
+                  <tr class="today"><td>Friday – Saturday</td><td>12:00 PM – 11:00 PM</td></tr>
+                  <tr><td>Sunday</td><td>12:00 PM – 10:00 PM</td></tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <p style="font-size:0.8rem;color:var(--muted);margin-bottom:1rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;">Follow Us</p>
+          <div class="contact-social">
+            <a href="#" class="social-btn" title="Instagram">📸</a>
+            <a href="#" class="social-btn" title="Facebook">👍</a>
+            <a href="#" class="social-btn" title="Twitter">🐦</a>
+            <a href="#" class="social-btn" title="YouTube">▶️</a>
+          </div>
+        </div>
+
+        <!-- RIGHT: FORM -->
+        <div class="contact-form-wrap animate animate-delay-2">
+          <!-- Form -->
+          <div id="formContent">
+            <h3 class="form-title">Reserve Your Table</h3>
+            <p class="form-subtitle">Fill in the details below and we'll confirm your reservation within 2 hours.</p>
+
+            <form id="reservationForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fname">First Name *</label>
+                  <input type="text" id="fname" name="fname" placeholder="Arjun" required>
+                  <span class="field-error" id="fnameErr">Please enter your first name.</span>
+                </div>
+                <div class="form-group">
+                  <label for="lname">Last Name *</label>
+                  <input type="text" id="lname" name="lname" placeholder="Mehta" required>
+                  <span class="field-error" id="lnameErr">Please enter your last name.</span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" placeholder="arjun@email.com" required>
+                  <span class="field-error" id="emailErr">Please enter a valid email.</span>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number *</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required>
+                  <span class="field-error" id="phoneErr">Please enter your phone number.</span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group date-input-wrap">
+                  <label for="date">Date *</label>
+                  <input type="date" id="date" name="date" required>
+                  <span class="field-error" id="dateErr">Please select a date.</span>
+                </div>
+                <div class="form-group date-input-wrap">
+                  <label for="time">Preferred Time *</label>
+                  <input type="time" id="time" name="time" min="12:00" max="22:30" required>
+                  <span class="field-error" id="timeErr">Please select a time.</span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="guests">Number of Guests *</label>
+                  <select id="guests" name="guests" required>
+                    <option value="" disabled selected>Select guests</option>
+                    <option value="1">1 Person</option>
+                    <option value="2">2 People</option>
+                    <option value="3">3 People</option>
+                    <option value="4">4 People</option>
+                    <option value="5">5 People</option>
+                    <option value="6">6 People</option>
+                    <option value="7-10">7–10 People</option>
+                    <option value="10+">10+ People (Group)</option>
+                  </select>
+                  <span class="field-error" id="guestsErr">Please select number of guests.</span>
+                </div>
+                <div class="form-group">
+                  <label for="occasion">Occasion</label>
+                  <select id="occasion" name="occasion">
+                    <option value="" disabled selected>Select occasion</option>
+                    <option value="casual">Casual Dining</option>
+                    <option value="birthday">Birthday</option>
+                    <option value="anniversary">Anniversary</option>
+                    <option value="date">Romantic Date</option>
+                    <option value="business">Business Lunch/Dinner</option>
+                    <option value="family">Family Gathering</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="requests">Special Requests</label>
+                <textarea id="requests" name="requests" placeholder="Dietary requirements, accessibility needs, decoration requests, etc."></textarea>
+              </div>
+
+              <label class="checkbox-group">
+                <input type="checkbox" id="agree" required>
+                <span>I agree to receive a confirmation SMS/email for my reservation. <a href="#">Privacy Policy</a></span>
+              </label>
+              <span class="field-error" id="agreeErr" style="margin-top:-0.75rem;margin-bottom:1rem">Please accept the terms to proceed.</span>
+
+              <button type="submit" class="btn btn-primary form-submit">Confirm Reservation →</button>
+            </form>
+          </div>
+
+          <!-- Success -->
+          <div class="form-success" id="formSuccess">
+            <div class="success-icon">🎉</div>
+            <h3>Reservation Confirmed!</h3>
+            <p>Thank you! We've received your request and will send a confirmation to your email within 2 hours.<br><br>We look forward to welcoming you at Saveur.</p>
+            <br>
+            <a href="../index.html" class="btn btn-primary">Back to Home</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ MAP ══════════════════════════════ -->
+  <section class="map-section">
+    <div class="container">
+      <div class="map-wrap">
+        <div class="map-placeholder">
+          <span class="map-pin">📍</span>
+          <h3>Saveur Restaurant</h3>
+          <p>12 Connaught Place, Block A, New Delhi – 110001</p>
+          <br>
+          <a href="https://maps.google.com/?q=Connaught+Place+New+Delhi" target="_blank" class="btn btn-dark" style="margin-top:0.5rem">Open in Google Maps</a>
+        </div>
+        <!-- In a real deployment, embed an iframe here:
+        <iframe src="https://maps.google.com/maps?q=..." ...></iframe> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">Sa<span>veur</span></div>
+          <p>Fine dining in the heart of New Delhi since 1998. Where every meal becomes a cherished memory.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#reservation">Reservations</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Hours</h4>
+          <ul>
+            <li><a>Mon – Thu: 12pm – 10pm</a></li>
+            <li><a>Fri – Sat: 12pm – 11pm</a></li>
+            <li><a>Sunday: 12pm – 10pm</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+            <li><a href="mailto:hello@saveur.in">hello@saveur.in</a></li>
+            <li><a>12 Connaught Place</a></li>
+            <li><a>New Delhi – 110001</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Saveur Restaurant. All rights reserved.</span>
+        <span>Built by <a href="#">Chinmay Gehlot</a> · EngineerCore Internship 2026</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/contact.js"></script>
+</body>
+</html>
